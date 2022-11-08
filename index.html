@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <!-- link necessari per il Google Font -->
     <title>Form</title>
 </head>
 
@@ -24,57 +29,55 @@
 -->
 
 <body>
-    <div class="form-card-container">
-        <div class="form-card">
-            <img class ="form-card-logo" src="./images/lappland-logo-light.svg" alt="logo">    
-            <div class="form-card-header">
-                <h1>Inserire dati</h1>
-            </div>
-            <form class="form-card-body">
-                <div class="form-card-input">
-                    <label for="nome">Nome:</label>
-                    <input type="text" placeholder="inserire nome" name="nome" id="nome">
-                </div>
-                <div class="form-card-input">
-                    <label for="cognome">Cognome:</label>
-                    <input type="text" placeholder="inserire cognome" name="cognome" id="cognome">
-                </div>
-                <div class="form-card-input">
-                    <span>
-                        <label for="giorno">Giorno:</label>
-                        <select name="giorno" id="giorno"></select>
-                    </span>
-                    <span>
-                        <label for="mese">Mese:</label>
-                        <select name="mese" id="mese"></select>
-                    </span>
-                    <span>
-                        <label for="anno">Anno:</label>
-                        <select name="anno" id="anno">Anno:</select>
-                    </span>
-                </div>
-
-                <div class="form-card-input">
-                    <label for="cod-fiscale">Codice fiscale:</label>
-                    <input type="text" placeholder="inserire codice fiscale" name="cod-fiscale" id="cod-fiscale">
-                </div>
-                <div class="form-card-input">
-                    <label for="num-cell">Numero di Cellulare:</label>
-                    <input type="text" placeholder="inserire n.cellulare" name="num-cell" id="num-cell">
-                </div>
-                <div class="form-card-input">
-                    <label for="password">Password:</label>
-                    <input type="text" placeholder="inserire password" name="password" id="password">
-                </div>
-                <div class="form-card-input">
-                    <label for="p-iva">Partita IVA:</label>
-                    <input type="text" placeholder="inserire p.iva" name="p-iva" id="p-iva">
-                </div>
-            </form>
-
-            <script src="./script.js"></script>
-
+    <div class="form-card">
+        <img class ="form-card-logo" src="./images/lappland-logo-light.jpg" alt="logo">    
+        <div class="form-card-header">
+            <h1>Inserire dati</h1>
         </div>
+        <form class="form-card-body">
+            <div class="form-card-input">
+                <label for="nome">Nome:</label>
+                <input type="text" placeholder="inserire nome" name="nome" id="nome" required>
+            </div>
+            <div class="form-card-input">
+                <label for="cognome">Cognome:</label>
+                <input type="text" placeholder="inserire cognome" name="cognome" id="cognome" required>
+            </div>
+            <div class="form-card-input-date">
+                <span>Data di nascita:</span>
+                <span>
+                    <select name="giorno" id="giorno" required></select>
+                </span>
+                <span>
+                    <select name="mese" id="mese" required></select>
+                </span>
+                <span>
+                    <select name="anno" id="anno" required></select>
+                </span>
+            </div>
+
+            <div class="form-card-input">
+                <label for="cod-fiscale">Codice fiscale:</label>
+                <input type="text" placeholder="inserire codice fiscale" name="cod-fiscale" id="cod-fiscale" pattern="^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$" required>
+            </div>
+            <div class="form-card-input">
+                <label for="num-cell">Numero di Cellulare:</label>
+                <input type="text" placeholder="inserire n.cellulare" name="num-cell" id="num-cell" pattern="^[0-9]{10}" required>
+            </div>
+            <div class="form-card-input">
+                <label for="password">Password:</label>
+                <input type="password" placeholder="inserire password" name="password" id="password" required>
+            </div>
+            <div class="form-card-input">
+                <label for="p-iva">Partita IVA:</label>
+                <input type="text" placeholder="inserire p.iva" name="p-iva" id="p-iva" pattern="^[0-9]{11}$" required>
+            </div>
+            <div class="form-card-submit-btn">
+                <input type="submit" value="Invia">
+                <input type="reset" value="Reset dati">
+            </div>
+        </form>
+        <script src="./script.js"></script>
     </div>
 </body>
 
