@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Form</title>
 </head>
 
@@ -24,25 +26,20 @@
 <body>
     <div class="form-card-container">
         <div class="form-card">
-            <div class="form-card-logo">
-                <img src="./images/lappland-logo-light.svg" alt="logo">
-            </div>
+            <img class ="form-card-logo" src="./images/lappland-logo-light.svg" alt="logo">    
             <div class="form-card-header">
                 <h1>Inserire dati</h1>
             </div>
-            <form class="form-card-form">
-                <input 
-                    type="text" 
-                    placeholder="inserire nome" 
-                    name="nome" 
-                    id="nome">
-                <input 
-                    type="text" 
-                    placeholder="inserire cognome" 
-                    name="cognome" 
-                    id="cognome">
-                
-                <div class="form-card-date-input">
+            <form class="form-card-body">
+                <div class="form-card-input">
+                    <label for="nome">Nome:</label>
+                    <input type="text" placeholder="inserire nome" name="nome" id="nome">
+                </div>
+                <div class="form-card-input">
+                    <label for="cognome">Cognome:</label>
+                    <input type="text" placeholder="inserire cognome" name="cognome" id="cognome">
+                </div>
+                <div class="form-card-input">
                     <span>
                         <label for="giorno">Giorno:</label>
                         <select name="giorno" id="giorno"></select>
@@ -56,32 +53,23 @@
                         <select name="anno" id="anno">Anno:</select>
                     </span>
                 </div>
-        
-                <input 
-                    type="text" 
-                    placeholder="inserire codice fiscale" 
-                    name="cod-fiscale" 
-                    id="cod-fiscale">
-                <input 
-                    type="text"
-                    placeholder="inserire email" 
-                    name="email" 
-                    id="email">
-                <input 
-                    type="text" 
-                    placeholder="inserire n.cellulare"
-                    name="num-cell" 
-                    id="num-cell">
-                <input 
-                    type="text"
-                    placeholder="inserire password"
-                    name="password"
-                    id="password">
-                <input 
-                    type="text"
-                    placeholder="inserire p.iva"
-                    name="p-iva"
-                    id="p-iva">
+
+                <div class="form-card-input">
+                    <label for="cod-fiscale">Codice fiscale:</label>
+                    <input type="text" placeholder="inserire codice fiscale" name="cod-fiscale" id="cod-fiscale">
+                </div>
+                <div class="form-card-input">
+                    <label for="num-cell">Numero di Cellulare:</label>
+                    <input type="text" placeholder="inserire n.cellulare" name="num-cell" id="num-cell">
+                </div>
+                <div class="form-card-input">
+                    <label for="password">Password:</label>
+                    <input type="text" placeholder="inserire password" name="password" id="password">
+                </div>
+                <div class="form-card-input">
+                    <label for="p-iva">Partita IVA:</label>
+                    <input type="text" placeholder="inserire p.iva" name="p-iva" id="p-iva">
+                </div>
             </form>
 
             <script src="./script.js"></script>
@@ -89,4 +77,5 @@
         </div>
     </div>
 </body>
+
 </html>
