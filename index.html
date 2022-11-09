@@ -36,12 +36,24 @@
         </div>
         <form class="form-card-body">
             <div class="form-card-input">
+                <label for="logo">Logo:</label>
+                <input type="file" placeholder="inserire logo" name="logo" id="logo" accept=".jpg, .jpeg, .png" required>
+            </div>
+            <div class="form-card-input">
                 <label for="nome">Nome:</label>
                 <input type="text" placeholder="inserire nome" name="nome" id="nome" required>
             </div>
             <div class="form-card-input">
                 <label for="cognome">Cognome:</label>
                 <input type="text" placeholder="inserire cognome" name="cognome" id="cognome" required>
+            </div>
+            <div class="form-card-input">
+                <label for="indirizzo">Indirizzo:</label>
+                <input type="text" placeholder="inserire indirizzo" name="indirizzo" id="indirizzo" required>
+            </div>
+            <div class="form-card-input">
+                <label for="citta">Città:</label>
+                <input type="text" placeholder="inserire città" name="citta" id="citta" required>
             </div>
             <div class="form-card-input-date">
                 <span>Data di nascita:</span>
@@ -74,6 +86,7 @@
             </div>
             <div class="form-card-submit-btn">
                 <input type="submit" value="Invia">
+                <input type="button" value="Nuova scheda" onClick="parent.location='http://www.google.com/'" formtarget="_blank">
                 <input type="reset" value="Reset dati">
             </div>
         </form>
