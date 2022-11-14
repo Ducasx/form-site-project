@@ -75,11 +75,11 @@
 
             <div class="form-card-input">
                 <label for="cod-fiscale">Codice fiscale:</label>
-                <input type="text" placeholder="inserire codice fiscale" name="cod-fiscale" id="cod-fiscale" pattern="^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$" required>
+                <input type="text" placeholder="inserire codice fiscale" name="cod-fiscale" id="cod-fiscale" pattern="^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$" maxlength="16" required>
             </div>
             <div class="form-card-input">
                 <label for="num-cell">Numero di Cellulare:</label>
-                <input type="text" placeholder="inserire n.cellulare" name="num-cell" id="num-cell" pattern="^[0-9]{10}" required>
+                <input type="text" placeholder="inserire n.cellulare" name="num-cell" id="num-cell" pattern="^[0-9]{10}" maxlength="10" required>
             </div>
             <div class="form-card-input">
                 <label for="password">Password:</label>
@@ -87,7 +87,7 @@
             </div>
             <div class="form-card-input">
                 <label for="p-iva">Partita IVA:</label>
-                <input type="text" placeholder="inserire p.iva" name="p-iva" id="p-iva" pattern="^[0-9]{11}$" required>
+                <input type="text" placeholder="inserire p.iva" name="p-iva" id="p-iva" pattern="^[0-9]{11}$" maxlength="11" required>
             </div>
             <div class="form-card-submit-btn">
                 <input type="submit" value="Invia">
